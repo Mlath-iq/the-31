@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#150e20">
+  <meta name="description" content="31 صورة، 31 لغز، وقصة حب واحدة لإيلان">
+  <title>31 سرّ لإيلان 🦋</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span class="glow glow-one"></span><span class="glow glow-two"></span><span class="glow glow-three"></span></div>
+  <div class="flying" aria-hidden="true"><span>🦋</span><span>✧</span><span>🦋</span><span>✦</span><span>♡</span><span>🦋</span></div>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✧</span><div><strong>عالم إيلان</strong><small>SECRET CHAPTERS</small></div></div>
+      <button id="restart" class="text-button" type="button" title="الرجوع إلى البداية">↺ <span>من البداية</span></button>
+    </header>
+
+    <section class="screen intro" id="intro" aria-labelledby="welcome-title">
+      <div class="intro-ornament" aria-hidden="true">🦋</div>
+      <div class="eyebrow"><span></span> رسالة سرّية إلك وحدج <span></span></div>
+      <h1 id="welcome-title">وراء كل صورة<br><em>سرّ إلك</em> ♡</h1>
+      <p class="intro-copy">مو أي أحد يگدر يدخل هالعالم… هاي رحلة بيها <strong>31 صورة و31 لغز</strong>، وكل جواب صحيح يفتح لج ذكرى جديدة.</p>
+      <form id="gate-form" class="question-box" novalidate>
+        <span class="little-label">لغز البوابة الأولى</span>
+        <h2 id="gate-question">شنو الاسم اللي من أسمعه يصير يومي أحلى؟</h2>
+        <label for="gate-answer" class="sr-only">جواب لغز الدخول</label>
+        <div class="answer-row"><input id="gate-answer" type="text" placeholder="اكتبي الجواب هنا..." autocomplete="off" enterkeyhint="go" spellcheck="false" required><button type="submit" class="primary-button">افتحي العالم <span>←</span></button></div>
+        <p class="message" id="gate-message" role="status" aria-live="polite"></p>
+        <button type="button" id="gate-hint-btn" class="hint-button">✧ أريد تلميح صغير</button>
+        <p id="gate-hint" class="hint-content" hidden>أول حرف من اسمج... وبقية الحروف ساكنة بگلبي ♡</p>
+      </form>
+      <p class="fineprint">هذي الرحلة مكتوبة إلج... لأن كل صورة بيها شي يستاهل نتذكره</p>
+    </section>
+
+    <section class="screen journey" id="journey" aria-label="رحلة الصور والألغاز" hidden>
+      <div class="journey-heading"><div><span class="little-label">CHAPTER <span id="chapter-num">01</span> / 31</span><h1>صورة ورا صورة <span>♡</span></h1></div><div class="progress-number" id="percent" aria-label="نسبة التقدم">0%</div></div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="31" aria-valuenow="0" aria-label="عدد الألغاز المكتملة"><div id="progress-fill"></div></div>
+      <div class="main-card">
+        <div class="photo-stage" id="photo-stage">
+          <img id="current-photo" src="" alt="" decoding="async">
+          <div class="placeholder" id="photo-placeholder" aria-label="مكان الصورة التي ستُضاف لاحقاً">
+            <div class="placeholder-sparkle">✧ &nbsp; ♡ &nbsp; ✧</div>
+            <div class="placeholder-flower">❀</div>
+            <strong id="placeholder-number">01</strong>
+            <span>هنا صورتنا الحلوة</span>
+            <small>ضيفي الصورة باسم img1.jpg داخل مجلد images</small>
+          </div>
+          <div class="picture-shade"></div>
+          <div class="photo-stamp"><span>✧</span> <span id="photo-stamp-num">01</span> / 31</div>
+          <div class="photo-riddle"><span>✧ لغز الصورة <span id="photo-riddle-num">01</span></span><h2 id="puzzle-question">...</h2></div>
+        </div>
+        <div class="puzzle-panel">
+          <div class="puzzle-icon" aria-hidden="true">✦</div>
+          <span class="little-label">سرّ الصورة <span id="puzzle-num">01</span></span>
+          <h2 class="answer-title">شنو الجواب برأيج؟ ♡</h2>
+          <p class="puzzle-explain">حلّي اللغز حتى أفتح لج الصورة اللي وراها</p>
+          <form id="puzzle-form" novalidate>
+            <label for="puzzle-answer" class="sr-only">جواب لغز الصورة</label>
+            <input id="puzzle-answer" type="text" placeholder="شنو الجواب برأيج؟" autocomplete="off" enterkeyhint="go" spellcheck="false" required>
+            <button type="submit" class="primary-button full" id="unlock-next">افتحي الصورة الجاية <span>←</span></button>
+          </form>
+          <p class="message" id="puzzle-message" role="status" aria-live="polite"></p>
+          <div class="puzzle-tools"><button id="hint-btn" class="hint-button" type="button">✧ أريد تلميح</button><button id="back-btn" class="back-button" type="button">→ الصورة السابقة</button></div>
+          <p id="hint-text" class="hint-content" hidden></p>
+        </div>
+      </div>
+      <p class="journey-footer">31 خطوة، وكل خطوة أقرب لقصة ما تنتهي <span>♡</span></p>
+    </section>
+
+    <section class="screen finale" id="finale" hidden aria-labelledby="finale-title">
+      <div class="finale-deco">🦋</div>
+      <span class="little-label">YOU UNLOCKED ALL 31 MEMORIES</span>
+      <h1 id="finale-title">وصلتي لآخر صورة<br><em>بس مو لآخر حب</em></h1>
+      <p>كل هالألغاز حتى أگولج شي واحد… إنتِ مو بس أجمل جزء من يومي، إنتِ العالم اللي أحب أرجعله كل مرة. كل صورة هنا دليل إن الذكريات الحلوة تصير أحلى من تكون وياج يا إيلان.</p>
+      <div class="finale-signature">إلج وحدج، من قلبي ♡</div>
+      <button type="button" class="primary-button" id="play-again">نرجع نعيشها مرة ثانية ↺</button>
+    </section>
+
+    <footer class="bottomline">MADE WITH ♡ FOR EILAN <span>✧</span> 31 LITTLE SECRETS</footer>
+  </main>
+</body>
+</html>
